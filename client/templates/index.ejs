@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Survey Form</title>
+	</head>
+	<body>
+		<div id="wrapper">
+			<form action="/" method="post">
+				<label for="name">Name:</label>
+				<input type="text" name="name" id="name">
+				<label for="place">Location:</label>
+				<select name="place" id="place">
+					<option value="here">Here</option>
+					<option value="there">There</option>
+					<option value="anywhere">Anywhere</option>
+				</select>
+				<label for="lang">Language:</label>
+				<select name="lang" id="lang">
+					<option value="JS">JS</option>
+					<option value="html">HTML</option>
+					<option value="css">CSS</option>
+				</select>
+				<label for="comments">Comments (optional):</label>
+				<textarea name="comments" id="comments"></textarea>
+				<input type="submit" value="Submit">
+			</form>
+			<div id="names">
+			<% if(names){for(let i = 0; i < names.length; i++) { %>
+			<p><%=names[i]%></p>
+			<% }} %>
+			</div>
+		</div>
+	</body>
+</html>
